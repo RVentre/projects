@@ -1,0 +1,204 @@
+ADDRESS
+INSERT INTO `address` (`id`, `address`, `city`, `country_code`) VALUES ('0', 'Via Gritti 45', 'Varese', '21058');
+INSERT INTO `address` (`id`, `address`, `city`, `country_code`) VALUES ('1', 'Via Porro 45', 'Induno', '21056');
+INSERT INTO `address` (`id`, `address`, `city`, `country_code`) VALUES ('2', 'Via Jamoretti 23', 'Milano', '31056');
+INSERT INTO `address` (`id`, `address`, `city`, `country_code`) VALUES ('3', 'Via GianBattisti 23', 'Milano', '31056');
+
+PERSON
+INSERT INTO `person` (`id`, `name`, `address`) VALUES ('0', 'John Doe', '0');
+INSERT INTO `person` (`id`, `name`, `address`) VALUES ('1', 'Mina Pol', '1');
+INSERT INTO `person` (`id`, `name`, `address`) VALUES ('2', 'Pinuccia', '2');
+INSERT INTO `person` (`id`, `name`, `address`) VALUES ('3', 'Giulia', '3');
+INSERT INTO `person` (`id`, `name`, `address`) VALUES ('4', 'Roberto', '4');
+
+ACCOUNT
+INSERT INTO `account` (`id`, `abi_code`, `account`, `account_id`, `activated_date`, `alias`, `bic_code`, `cab_code`, `country_code`, `currency`, `holder_name`, `iban`, `international_cin`, `product_name`, `intestatario`) VALUES ('0', '37069', '115706240270', '14930637', '2008-12-25', 'Company main account', 'SELBIT2BXXX', '78430', 'IT', 'EUR', 'ACME Inc.', 'IT22D3706978430115706240270', '22', 'Generic company cash account', '0');
+INSERT INTO `account` (`id`, `abi_code`, `account`, `account_id`, `activated_date`, `alias`, `bic_code`, `cab_code`, `country_code`, `currency`, `holder_name`, `iban`, `international_cin`, `product_name`, `intestatario`) VALUES ('1', '46980', '224376559921', '35761126', '2009-08-21', 'Company', NULL, '44217', 'FR', 'USD', 'Company', 'IT23A0336844430152923804660', '33', 'Company', '1');
+INSERT INTO `account` (`id`, `abi_code`, `account`, `account_id`, `activated_date`, `alias`, `bic_code`, `cab_code`, `country_code`, `currency`, `holder_name`, `iban`, `international_cin`, `product_name`, `intestatario`) VALUES ('2', '12345', '225476559900', '12231221', '2010-08-21', 'Company jjjj', NULL, '44333', 'EUR', 'USD', 'Company', 'IT2323232323232323232', '43', 'Company', '2');
+INSERT INTO `account` (`id`, `abi_code`, `account`, `account_id`, `activated_date`, `alias`, `bic_code`, `cab_code`, `country_code`, `currency`, `holder_name`, `iban`, `international_cin`, `product_name`, `intestatario`) VALUES ('3', '11111', '111111111111', '11111111', '2020-05-21', 'Company', NULL, '44217', 'FR', 'USD', 'Company', 'IT111111111111111111111111', '11', 'AAAAA', '1');
+INSERT INTO `account` (`id`, `abi_code`, `account`, `account_id`, `activated_date`, `alias`, `bic_code`, `cab_code`, `country_code`, `currency`, `holder_name`, `iban`, `international_cin`, `product_name`, `intestatario`) VALUES ('4', '46980', '220012344444', '34444444', '2009-08-21', 'Company', NULL, '44217', 'EUR', 'USD', 'Company', 'IT23A001010101010101010000', '33', 'CCCCC', '3');
+
+FEE
+INSERT INTO `fee` (`id`, `amount`, `currency`, `description`, `fee_code`) VALUES ('0', '0.25', 'EUR', 'Money transfer execution fee', 'MK001');
+INSERT INTO `fee` (`id`, `amount`, `currency`, `description`, `fee_code`) VALUES ('1', '3.5', 'EUR', 'Currency exchange fee', 'MK003');
+INSERT INTO `fee` (`id`, `amount`, `currency`, `description`, `fee_code`) VALUES ('2', '8.0', 'EUR', 'Currency exchange fee', 'MK0022');
+INSERT INTO `fee` (`id`, `amount`, `currency`, `description`, `fee_code`) VALUES ('3', '2.7', 'EUR', 'Currency exchange fee', 'MK003');
+
+
+
+TRANSACTION
+INSERT INTO `transaction` (`id`, `accounting_date`, `amount`, `currency`, `description`, `enumeration`, `operation_id`, `transaction_id`, `value`, `value_date`, `account`, `creditor`, `debtor`) VALUES ('1', '2022-01-10', '800', 'EUR', 'BA JOHN DOE PAYMENT', 'GBS_TRANSACTION_TYPE', '0000000547098', '1452347896', 'GBS_TRANSACTION_TYPE_007', '2022-01-10', '0', '1', '0');
+INSERT INTO `transaction` (`id`, `accounting_date`, `amount`, `currency`, `description`, `enumeration`, `operation_id`, `transaction_id`, `value`, `value_date`, `account`, `creditor`, `debtor`) VALUES ('0', '2019-04-01', '-10', 'EUR', 'CO MONEY TRANSFER FEES', 'GBS_TRANSACTION_TYPE', '00000000273015', '1331714088', 'GBS_TRANSACTION_TYPE_0015', '2022-04-13', '0', '0', '1');
+INSERT INTO `transaction` (`id`, `accounting_date`, `amount`, `currency`, `description`, `enumeration`, `operation_id`, `transaction_id`, `value`, `value_date`, `account`, `creditor`, `debtor`) VALUES ('2', '2010-04-01', '320', 'EUR', 'aaaaaaaaaaaaaaaaaaa', 'GBS_TRANSACTION_TYPE', '11000000273015', '1331714088', 'GBS_TRANSACTION_TYPE_0015', '2022-02-17', '0', '0', '1');
+INSERT INTO `transaction` (`id`, `accounting_date`, `amount`, `currency`, `description`, `enumeration`, `operation_id`, `transaction_id`, `value`, `value_date`, `account`, `creditor`, `debtor`) VALUES ('3', '2020-04-01', '-40', 'EUR', 'WWWWWWWWWWWWWWWWW', 'GBS_TRANSACTION_TYPE', '22000000273015', '1331714088', 'GBS_TRANSACTION_TYPE_0015', '2022-02-13', '0', '0', '2');
+INSERT INTO `transaction` (`id`, `accounting_date`, `amount`, `currency`, `description`, `enumeration`, `operation_id`, `transaction_id`, `value`, `value_date`, `account`, `creditor`, `debtor`) VALUES ('4', '2021-04-01', '908', 'EUR', 'GGGGGGGGGGGGGGGGGG', 'GBS_TRANSACTION_TYPE', '33300000273015', '1331714088', 'GBS_TRANSACTION_TYPE_0015', '2022-04-23', '0', '0', '3');
+
+SECONDA API REQUEST
+1) funzionante (Mina Pol riceve da John Doe)
+{
+  "creditor": {
+    "name": "Mina Pol",
+    "account": {
+      "accountCode": "IT23A0336844430152923804660",
+      "bicCode": "SELBIT2BXXX"
+    },
+    "address": {
+      "address": "Via Porro 45",
+      "city": "Induno",
+      "countryCode": "21056"
+    }
+  },
+  "executionDate": "2019-04-01",
+  "uri": "REMITTANCE_INFORMATION",
+  "description": "Payment invoice 75/2017",
+  "amount": 800,
+  "currency": "EUR",
+  "isUrgent": false,
+  "isInstant": false,
+  "feeType": "SHA",
+  "feeAccountId": "45685475",
+  "taxRelief": {
+    "taxReliefId": "L449",
+    "isCondoUpgrade": false,
+    "creditorFiscalCode": "56258745832",
+    "beneficiaryType": "NATURAL_PERSON",
+    "naturalPersonBeneficiary": {
+      "fiscalCode1": "MRLFNC81L04A859L",
+      "fiscalCode2": null,
+      "fiscalCode3": null,
+      "fiscalCode4": null,
+      "fiscalCode5": null
+    },
+    "legalPersonBeneficiary": {
+      "fiscalCode": "prova",
+      "legalRepresentativeFiscalCode": "prova"
+    }
+  }
+}
+
+2)non funzionante (address non appartiene a Mina Pol)
+{
+  "creditor": {
+    "name": "Mina Pol",
+    "account": {
+      "accountCode": "IT23A0336844430152923804660",
+      "bicCode": "SELBIT2BXXX"
+    },
+    "address": {
+      "address": "Via Gritti 45",
+      "city": "Induno",
+      "countryCode": "21056"
+    }
+  },
+  "executionDate": "2019-04-01",
+  "uri": "REMITTANCE_INFORMATION",
+  "description": "Payment invoice 75/2017",
+  "amount": 800,
+  "currency": "EUR",
+  "isUrgent": false,
+  "isInstant": false,
+  "feeType": "SHA",
+  "feeAccountId": "45685475",
+  "taxRelief": {
+    "taxReliefId": "L449",
+    "isCondoUpgrade": false,
+    "creditorFiscalCode": "56258745832",
+    "beneficiaryType": "NATURAL_PERSON",
+    "naturalPersonBeneficiary": {
+      "fiscalCode1": "MRLFNC81L04A859L",
+      "fiscalCode2": null,
+      "fiscalCode3": null,
+      "fiscalCode4": null,
+      "fiscalCode5": null
+    },
+    "legalPersonBeneficiary": {
+      "fiscalCode": "prova",
+      "legalRepresentativeFiscalCode": "prova"
+    }
+  }
+}
+
+3)non funzionante iban creditor errato
+
+{
+  "creditor": {
+    "name": "Mina Pol",
+    "account": {
+      "accountCode": "IT23A0336844430152966604660",
+      "bicCode": "SELBIT2BXXX"
+    },
+    "address": {
+      "address": "Via Gritti 45",
+      "city": "Induno",
+      "countryCode": "21056"
+    }
+  },
+  "executionDate": "2019-04-01",
+  "uri": "REMITTANCE_INFORMATION",
+  "description": "Payment invoice 75/2017",
+  "amount": 800,
+  "currency": "EUR",
+  "isUrgent": false,
+  "isInstant": false,
+  "feeType": "SHA",
+  "feeAccountId": "45685475",
+  "taxRelief": {
+    "taxReliefId": "L449",
+    "isCondoUpgrade": false,
+    "creditorFiscalCode": "56258745832",
+    "beneficiaryType": "NATURAL_PERSON",
+    "naturalPersonBeneficiary": {
+      "fiscalCode1": "MRLFNC81L04A859L",
+      "fiscalCode2": null,
+      "fiscalCode3": null,
+      "fiscalCode4": null,
+      "fiscalCode5": null
+    },
+    "legalPersonBeneficiary": {
+      "fiscalCode": "prova",
+      "legalRepresentativeFiscalCode": "prova"
+    }
+  }
+}
+
+4) corretta Pinuccia fa il bonifico a John Doe
+{
+  "creditor": {
+    "name": "John Doe",
+    "account": {
+      "accountCode": "IT22D3706978430115706240270",
+      "bicCode": "SELBIT2BXXX"
+    },
+    "address": {
+      "address": "Via Gritti 45",
+      "city": "Varese",
+      "countryCode": "21058"
+    }
+  },
+  "executionDate": "2019-04-01",
+  "uri": "REMITTANCE_INFORMATION",
+  "description": "Payment invoice 75/2017",
+  "amount": 800,
+  "currency": "EUR",
+  "isUrgent": false,
+  "isInstant": false,
+  "feeType": "SHA",
+  "feeAccountId": "45685475",
+  "taxRelief": {
+    "taxReliefId": "L449",
+    "isCondoUpgrade": false,
+    "creditorFiscalCode": "56258745832",
+    "beneficiaryType": "NATURAL_PERSON",
+    "naturalPersonBeneficiary": {
+      "fiscalCode1": "MRLFNC81L04A859L",
+      "fiscalCode2": null,
+      "fiscalCode3": null,
+      "fiscalCode4": null,
+      "fiscalCode5": null
+    },
+    "legalPersonBeneficiary": {
+      "fiscalCode": "prova",
+      "legalRepresentativeFiscalCode": "prova"
+    }
+  }
+}
